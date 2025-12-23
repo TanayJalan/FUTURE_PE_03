@@ -1,0 +1,50 @@
+
+ARCHITECTURE DIAGRAM — PROMPTCRAFT AI
+
++------------------+
+|     User Input   |
+| (CLI / Streamlit)|
++---------+--------+
+          |
+          v
++------------------+
+| Intent Classifier|
+| (Prompt-based)   |
++---------+--------+
+          |
+          v
++------------------+
+| Persona Selector |
+| (Strict Mapping) |
++---------+--------+
+          |
+          v
++---------------------------+
+| Prompt Builder            |
+| - System Rules            |
+| - Persona Constraints     |
+| - User Input              |
+| - Optional Memory         |
++-------------+-------------+
+              |
+              v
++---------------------------+
+| Local LLM (Ollama)        |
+| llama3 / mistral / phi3  |
++-------------+-------------+
+              |
+              v
++---------------------------+
+| Response Output           |
+| CLI / Streamlit UI        |
++---------------------------+
+
+
+DATA FLOW SUMMARY
+-----------------
+User Input
+→ Intent Classification
+→ Persona Enforcement
+→ Prompt Construction
+→ Local LLM Execution
+→ Response Returned
