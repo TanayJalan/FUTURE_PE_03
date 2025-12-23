@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# Conda
+*.conda
+.env/
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+
+# Ollama models (VERY IMPORTANT)
+.ollama/
